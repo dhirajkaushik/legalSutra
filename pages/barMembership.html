@@ -1,0 +1,33 @@
+<style>
+h2 {
+  color: #2E5C84;
+  font-size: 17px;
+  font-weight: bold;
+  /* margin-bottom: 1.8em; */
+  line-height: 1.8em;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: normal;
+}
+</style>
+<div class="container">
+  <div class="container_inner default_template_holder clearfix page_container_inner" style="padding-top:60px">
+    <div class="two_columns_75_25 background_color_sidebar grid2 clearfix">
+      <div class="column1">
+        <div class="column_inner" ng-repeat= "barMembership in barMemberShips">
+          <!--<img class="alignleft size-full wp-image-18172" src="../images/BarMembership.jpg" alt="06" width="300" height="220">-->
+          <!--<div >-->
+            <h2>
+              <a>
+              <img class="alignleft size-full wp-image-18172" src="{{barMembership.imageUrl}}" alt="06" width="150" height="220"></a>
+              {{barMembership.name}}
+            </h2>
+            <p>
+              {{barMembership.description}}
+            </p>
+        </div>
+      </div>
+    <!--</div>-->
+    </div>
+  </div>
+</div>

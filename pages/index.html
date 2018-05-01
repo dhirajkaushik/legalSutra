@@ -1,0 +1,267 @@
+<html>
+  <head>
+    <title>My Angular App!</title>
+
+
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/legalSutra.css">
+    <link rel="stylesheet" href="stylesheet/attorneyProfile.css">
+    <link rel="stylesheet" href="stylesheet/i-agree-popups.css">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    .sidenav {
+      height: 100%; /* 100% Full-height */
+      width: 0; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Stay on top */
+      top: 0; /* Stay at the top */
+      right: 0;
+      background-color: #111; /* Black*/
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    .main-content ,.site-header collapsed-nav ,.header-bar, footer, .footer_top_holder,.footer_bottom_holder{
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+    </style>
+
+  </head>
+  <body ng-app="legalSutra" ng-controller="MainCtrl">
+    <div class="site-content">
+
+      <!-- Header Content Start-->
+      <header class="site-header collapsed-nav" data-bg-image="">
+  			<div class="container">
+  				<div class="header-bar">
+  					<a href="index.html" class="branding">
+  						<img src="images/logo.png" alt="Legal Sutra" class="logo" style="height:80px">
+  					</a>
+  					<nav class="main-navigation">
+  						<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+  						<ul class="menu">
+  							<li class="home menu-item current-menu-item"><a href="/#/index"><i class="fas fa-home"></i></a></li>
+  							<li class="menu-item"><a href="/#/about">About</a></li>
+  							<li class="menu-item"><a href="/#/practiceArea">Practice Area</a></li>
+  							<li class="menu-item"><a href="/#/attorney">Attorney</a></li>
+  							<li class="menu-item"><a href="/#/careers">Careers</a></li>
+  							<li class="menu-item"><a href="/#/contact">Contact</a></li>
+                <!--<li class="menu-item"><a href="#" ng-click ="openNav()">&#9776;</a></li>-->
+                <li class="menu-item"><a ng-click="openNav()"><i class="fas fa-align-justify"></i></a></li>
+  						</ul>
+              <!--<span style="font-size:30px;cursor:pointer" ng-click="openNav()">&#9776;</span>-->
+  					</nav>
+  					<div class="mobile-navigation"></div>
+  				</div>
+  			</div>
+  		</header>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+      <main class="main-content">
+        <ui-view></ui-view>
+      </main>
+
+
+      <footer>
+				<div class="footer_inner clearfix">
+					<div class="footer_top_holder">
+						<div class="footer_top">
+							<div class="container">
+								<div class="container_inner">
+									<div class="four_columns clearfix">
+										<div class="column1 footer_col1">
+											<div class="column_inner">
+												<div id="text-3" class="widget widget_text">
+													<h5>LegalSutra</h5>
+													<div class="textwidget">
+														<img class="footer_logo" src="images/logo.png" width="" alt="logo">
+														<div class="separator  transparent center  " style="margin-top: 8px;margin-bottom: 2px;"></div>
+                            1-A, Express View Appartment (Super MIG Flats)
+                            <br>Sector 93, Noida-201304<br>India<br>+91-9911512400<br>
+														<div class="separator  transparent center  " style="margin-top: 12px;margin-bottom: 2px;"></div>
+														<span class="q_social_icon_holder normal_social"><a href="" target="_blank"><i class="qode_icon_font_awesome fab fa-facebook-square fa-lg simple_social" style="font-size: 17px;"></i></a></span>
+														<span class="q_social_icon_holder normal_social"><a href="" target="_blank"><i class="qode_icon_font_awesome fab fa-twitter-square fa-lg simple_social" style="font-size: 17px;"></i></a></span>
+														<span class="q_social_icon_holder normal_social"><a href="" target="_blank"><i class="qode_icon_font_awesome fab fa-youtube-square fa-lg simple_social" style="font-size: 17px;"></i></a></span>
+														<span class="q_social_icon_holder normal_social"><a href="" target="_blank"><i class="qode_icon_font_awesome fab fa-linkedin fa-lg simple_social" style="font-size: 17px;"></i></a></span>
+														<br>
+													</div>
+												</div>
+													<!--<div id="text-62" class="widget widget_text"><h5>LegalSutraWest</h5>
+														<div class="textwidget"><p><a href="/">Noida,India:</a>&nbsp; +91-9911512400</p></div>
+													</div>-->
+													<!--<div id="text-63" class="widget widget_text">
+														<h5>LegalSutraIndia</h5>
+														<div class="textwidget">
+															<p><a href="" target="_blank">Noida, India:</a>&nbsp; +91-9911512400</p>
+														</div>
+													</div>-->
+											</div>
+										</div>
+										<div class="column2 footer_col2">
+                      <div class="column_inner">
+                        <div id="text-222" class="widget widget_text">
+                          <div class="textwidget">
+                            <h5><a href="/about-us">About Us</a></h5>
+                          </div>
+                        </div>
+                        <div id="nav_menu-32" class="widget widget_nav_menu">
+                          <div class="menu-footer-middle-container">
+                            <ul id="menu-footer-middle" class="menu">
+                              <li id="menu-item-19307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19307">
+                                <a href="https://www.legalsutra.co.in/contact-us/">Contact Us</a>
+											        </li>
+											        <li id="menu-item-17927" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17927">
+                                <a href="/about-us/law-firm/mission/">Mission</a>
+                              </li>
+                              <li id="menu-item-17561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17561">
+												        <a href="https://www.legalsutra.co.in/about-us/law-firm/worldwide/">Worldwide</a>
+                              </li>
+                              <li id="menu-item-17562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17562">
+													      <a href="">Technology</a>
+                              </li>
+                              <li id="menu-item-21665" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21665">
+														    <a href="/about-us/law-firm/careers/">Careers</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column3 footer_col3">
+                      <div class="column_inner">
+                        <div id="nav_menu-63" class="widget widget_nav_menu">
+                          <h5>Reference</h5>
+                          <div class="menu-reference-container">
+                            <ul id="menu-reference" class="menu">
+                              <li id="menu-item-18312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18312">
+                                <a href="/immigration-terms/">Immigration Terms</a>
+                              </li>
+                              <li id="menu-item-18320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18320">
+																		<a href="https://www.legalsutra.co.in/statue-of-liberty/">Statue of Liberty</a></li>
+																		<li id="menu-item-18321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18321">
+																			<a href="https://www.legalsutra.co.in/famous-immigrants/">Famous Immigrants</a>
+																		</li>
+																		<li id="menu-item-18322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18322">
+																			<a href="https://www.legalsutra.co.in/immigration-in-the-movies/">Immigration in the Movies</a>
+																		</li>
+																		<li id="menu-item-18323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18323">
+																			<a href="https://www.legalsutra.co.in/useful-links/">Useful Links</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="column4 footer_col4">
+														<div class="column_inner">
+															<div id="nav_menu-7" class="widget widget_nav_menu">
+                                <h5>Legal</h5>
+                                <div class="menu-legal-container">
+                                  <ul id="menu-legal" class="menu">
+                                    <li id="menu-item-17194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17194">
+                                      <a href="https://www.legalsutra.co.in/trademarks/">Trademarks</a>
+                                    </li>
+                                    <li id="menu-item-17191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17191">
+                                      <a href="https://www.legalsutra.co.in/copyright/">Copyright</a>
+                                    </li>
+                                    <li id="menu-item-17192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17192">
+                                      <a href="https://www.legalsutra.co.in/disclaimer/">Disclaimer</a>
+                                    </li>
+                                    <li id="menu-item-17193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17193">
+                                      <a href="https://www.legalsutra.co.in/privacy-policy/">Privacy Policy</a>
+                                    </li>
+                                    <li id="menu-item-17195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17195">
+                                      <a href="https://www.legalsutra.co.in/bar-memberships/">Bar Memberships</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+													<!--<img src="/wp-content/uploads/2016/03/we-know-tagline.png" width="493" height="98">-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="footer_bottom_holder">
+									<div class="container">
+										<div class="container_inner">
+											<div class="footer_bottom">
+												<div class="textwidget">
+                          <span>© 2018 LegalSutra. All Rights Reserved.</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+        </footer>
+        <div class="iAgreePopup" style="display: block;">
+  			    <div class="popupBG" style="background:#e3e3e3">
+  			        &nbsp;
+  			    </div>
+  			    <div class="popupContainer" style="background-color: rgb(255, 255, 255); margin-top: -300px; margin-left: -310.5px; background-position: initial initial; background-repeat: initial initial;">
+              <div class="popupContent">
+                <p>DISCLAIMER</p>
+                <p>&nbsp;</p>
+                <p style="text-align: justify;">This website has been designed only for the purposes of dissemination of basic information on Legal Sutra; information which is otherwise available on the internet, various public platforms and social media. Careful attention has been given to ensure that the information provided herein is accurate and up-to-date. However, Legal Sutra is not responsible for any reliance that a reader places on such information and shall not be liable for any loss or damage caused due to any inaccuracy in or exclusion of any information, or its interpretation thereof. Reader is advised to confirm the veracity of the same from independent and expert sources.
+                </p>
+  			        <p style="text-align: justify;">This website is not an attempt to advertise or solicit clients, and does not seek to create or invite any lawyer-client relationship. The links provided on this website are to facilitate access to basic information on Legal Sutra, and, to share the various thought leadership initiatives undertaken by it. The content herein or on such links should not be construed as a legal reference or legal advice. Readers are advised not to act on any information contained herein or on the links and should refer to legal counsels and experts in their respective jurisdictions for further information and to determine its impact.
+                </p>
+  			        <p style="text-align: justify;">Legal Sutra advises against the use of the communication platform provided on this website for exchange of any confidential, business or politically sensitive information. User is requested to use his or her judgment and exchange of any such information shall be solely at the user’s risk.
+                </p>
+  			      </div>
+  			      <div class="popupChoices">
+                <div class="yesNo">
+                  <a href="#" class="agree popupChoiceButton" style=" background:#2b3f4d; color:#ba925e; ">Agree</a>
+                  <a href="https://www.google.co.in/" class="disagree popupChoiceButton" style=" background:#2b3f4d; color:#ba925e; ">Disagree</a></div>
+  			        </div>
+  			    </div>
+  			</div>
+      </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+  <script src="stylesheet/Font-Awesome/svg-with-js/js/fontawesome-all.min.js"></script>
+  <script src="javascript/jquery-1.11.1.min.js"></script>
+  <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+  <script src="javascript/plugins.js"></script>
+  <script src="javascript/angularApp.js"></script>
+  <script src="javascript/controller.js"></script>
+  <script src="javascript/config.js"></script>
+  <script src="javascript/controlsApp.js"></script>
+
+</html>

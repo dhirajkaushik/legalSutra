@@ -1,0 +1,133 @@
+<!-- Header Content End-->
+<!--
+<div class="hero">
+  <ul class="slides">
+    <li data-bg-image="../../images/slider-1.jpg">
+      <div class="container">
+        <div class="slide-content">
+          <h2 class="slide-title" style="color:white">LegalSutra</h2>
+          <p style="color:white">Law and order exist for the purpose of establishing justice.</p>
+        </div>
+      </div>
+    </li>
+    <li data-bg-image="../../images/slider-2.jpg">
+      <div class="container">
+        <div class="slide-content">
+          <h2 class="slide-title" style="color:white">LegalSutra</h2>
+          <p style="color:white">We are for truth, no matter who tells it. We are for justice, no matter who it's for or against.</p>
+        </div>
+      </div>
+    </li>
+
+    <li data-bg-image="../../images/slider-3.jpg">
+      <div class="container">
+        <div class="slide-content">
+          <h2 class="slide-title" style="color:white">LegalSutra</h2>
+          <p style="color:white">Individuals can resist injustice, but only a community can do justice.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+-->
+<style>
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: -450px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+.carousel-caption .slide-title {
+    font-size: 4em;
+    font-weight: 300;
+}
+.carousel-caption p {
+    font-size: 1.6em;
+}
+</style>
+<div ng-controller="HomeCtrl">
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}"
+        style="width:100%;
+        float: left;
+        position: relative;
+        display: block;
+        z-index: 1;
+        background-size: cover;
+        ">
+        <div class="carousel-caption">
+          <h2 class="slide-title" style="color:white">LegalSutra</h2>
+          <p>{{slide.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="hp-3columns" class="vc_row wpb_row section vc_row-fluid  grid_section full_screen_section" style=" padding-top:-40pxpx; text-align:left;">
+    <div class=" section_inner clearfix">
+      <div class="section_inner_margin clearfix">
+        <div class="hp-columns wpb_column vc_column_container vc_col-sm-12">
+          <div class="vc_column-inner ">
+            <div class="wpb_wrapper">
+              <div class="vc_row wpb_row section vc_row-fluid vc_inner " style=" text-align:left;">
+                <div class=" full_section_inner clearfix">
+                  <div class="consultations wpb_column vc_column_container vc_col-sm-4">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="wpb_single_image wpb_content_element vc_align_left   hp-column-h2">
+                          <div class="wpb_wrapper">
+                            <a href="/consultations/" target="_self">
+                              <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                <img width="580" height="420" src="https://www.murthy.com/wp-content/uploads/2016/05/consultations-link.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://www.murthy.com/wp-content/uploads/2016/05/consultations-link.jpg 580w, https://www.murthy.com/wp-content/uploads/2016/05/consultations-link-300x217.jpg 300w" sizes="(max-width: 580px) 100vw, 580px">
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hire-us wpb_column vc_column_container vc_col-sm-4">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="wpb_single_image wpb_content_element vc_align_left   hp-column-h2">
+                          <div class="wpb_wrapper">
+                            <a href="/client-services/hire-us/" target="_self">
+                              <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                <img width="580" height="420" src="https://www.murthy.com/wp-content/uploads/2016/05/hire-us-link.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://www.murthy.com/wp-content/uploads/2016/05/hire-us-link.jpg 580w, https://www.murthy.com/wp-content/uploads/2016/05/hire-us-link-300x217.jpg 300w" sizes="(max-width: 580px) 100vw, 580px">
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="client-services wpb_column vc_column_container vc_col-sm-4">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="wpb_single_image wpb_content_element vc_align_left   hp-column-h2">
+                          <div class="wpb_wrapper">
+                            <a href="/client-services/" target="_self">
+                              <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                <img width="580" height="420" src="https://www.murthy.com/wp-content/uploads/2016/05/client-services-link.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://www.murthy.com/wp-content/uploads/2016/05/client-services-link.jpg 580w, https://www.murthy.com/wp-content/uploads/2016/05/client-services-link-300x217.jpg 300w" sizes="(max-width: 580px) 100vw, 580px">
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

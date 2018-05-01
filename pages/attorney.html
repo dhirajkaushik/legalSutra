@@ -1,0 +1,86 @@
+<style>
+.clearfix:after { content: ""; display: initial; }
+}
+</style>
+<div class="fullwidth-block" data-bg-color="#edf2f4">
+  <div class="container">
+    <div class="container_inner default_template_holder clearfix page_container_inner" style="padding-top:60px">
+      <div class="two_columns_75_25 background_color_sidebar grid2 clearfix">
+        <div class="column1">
+          <div class="column_inner">
+
+            <!--  Header Start-->
+            <div class="vc_row wpb_row section vc_row-fluid " style=" text-align:left;">
+              <div class=" full_section_inner clearfix">
+                <div class="wpb_column vc_column_container vc_col-sm-12">
+                  <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                      <div class="wpb_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                          <p>When you hire the LegalSutra Attorneys, you get quality with uncompromising standards. We have built our reputation on it. Attorneys in our team are handpicked for their legal experience and education, attention to detail and sensitivity to the special needs of the clients we serve. Our attorneys are:</p>
+                          <ul>
+                            <li>Best Graduates of their colleges and universities.</li>
+                            <li>Experienced with decades of combined legal experience in richly diverse settings.</li>
+                            <li>Team players, who work together and in support of one another to serve our clients.</li>
+                          </ul>
+                          <h2>What Sets Our Attorneys Apart</h2>
+                          <p>In short, they are superbly equipped to understand the real-world complexities of legal practice, and to tailor effective strategies to the needs of each of our client.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  Header End-->
+
+            <div class="vc_row wpb_row section vc_row-fluid " style=" text-align:left;" ng-repeat ="pageRow in pageRows">
+              <div class=" full_section_inner clearfix" >
+                <!--Profile Start-->
+                <div class="bio wpb_column vc_column_container vc_col-sm-4" ng-repeat ="attorney in pageRow.attorneys">
+                  <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                      <div class="wpb_single_image wpb_content_element vc_align_left">
+                        <div class="wpb_wrapper">
+                          <a href="{{attorney.aboutUs}}" target="_self">
+                            <div class="vc_single_image-wrapper   vc_box_border_grey">
+                              <img width="700" height="566" src="{{attorney.headshotUrl}}" class="vc_single_image-img attachment-full" alt="" srcset="{{attorney.headshotUrl}} 700w, {{attorney.headshotUrl300x243}} 300w" sizes="(max-width: 700px) 100vw, 700px">
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="wpb_text_column wpb_content_element  att-name">
+                        <div class="wpb_wrapper">
+                          <h2 style="text-align: center;">
+                            <a href="{{attorney.aboutUs}}">{{attorney.attName}}</a>
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="wpb_text_column wpb_content_element  job-description">
+                        <div class="wpb_wrapper">
+                          <h3 style="text-align: center;">{{attorney.jobDescription}}</h3>
+                        </div>
+                      </div>
+                      <div class="wpb_text_column wpb_content_element  bio-text">
+                        <div class="wpb_wrapper">
+                          <p>{{attorney.bioText}}</p>
+                        </div>
+                      </div>
+                      <div class="wpb_text_column wpb_content_element  att-link">
+                        <div class="wpb_wrapper">
+                          <p style="text-align: right;">
+                            <a href="{{attorney.aboutUs}}">Read More&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!--Profile End-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
